@@ -1,19 +1,324 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventario MV Barcelona</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventario</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>Inventario MV Barcelona</h1>
-    <p>Bienvenido al inventario de MV Barcelona. Aquí podrás encontrar información sobre nuestros productos y servicios.</p>
-    <p>HOLA</p>
+  <div class="container">
+    <!--Sidebar,logo-->
+    <aside class="sidebar">
+      <div class="logo">
+        <div class="logo-icon"></div>
+        <div>
+          <h1>Inventario</h1>
+          <p>MV MIRANDA C.A</p>
+        </div>
+      </div>
+      <!--navegacion-->
+      <nav class="menu">
+        <p class="menu-label">MENÚ PRINCIPAL</p>
+        <a href="#" class="menu-item active"><i data-lucide="layout-grid"></i> Dashboard</a>
+        <a href="#" class="menu-item"><i data-lucide="box"></i> Inventario</a>
+        <a href="#" class="menu-item"><i data-lucide="arrow-left-right"></i> Movimientos</a>
+      </nav>
 
+      <div class="sidebar-footer">
+        <a href="#" class="menu-item"><i data-lucide="settings"></i> Ajustes</a>
+        <a href="#" class="menu-item"><i data-lucide="log-out"></i> Cerrar Sesión</a>
+        <p class="author">POR CÉSAR BRUZUAL</p>
+      </div>
+    </aside>
+    <!--agrupar contenido principal-->
+    <main class="main-content">
+      <header class="top-bar">
+        <div class="search-container">
+          <i data-lucide="search"></i>
+          <input type="text" placeholder="Buscar productos, códigos...">
+        </div>
+        <div class="notifications">
+          <i data-lucide="bell"></i>
+          <span class="dot"></span>
+        </div>
+      </header>
+      
+
+      <!--TODO: implementar la funcionalidad-->
+      <!--header dashboard, section dasboard view-->
+      <div id="dashboard-view">
+        <div class="container-dashboard">
+          <section class="content">
+            <div class="header-section">
+              <h2>Dashboard</h2>
+              <p>Resumen general del inventario y movimientos.</p>
+            </div>
+            <!---->
+            <div class="stats-grid">
+
+              <div class="card stat-card">
+                <div class="card-header">
+                  <span id="total-articles-val">Total Artículos</span>
+                  <i data-lucide="package" class="icon-blue"></i>
+                </div>
+                <h3>0</h3>
+                <p>En inventario</p>
+              </div>
+
+              <div class="card stat-card">
+                <div class="card-header">
+                  <span>Entradas (Mes)</span>
+                  <i data-lucide="trending-down" class="icon-green"></i>
+                </div>
+                <h3>0</h3>
+                <p>Transacciones registradas</p>
+              </div>
+              <div class="card stat-card">
+                <div class="card-header">
+                  <span>Salidas (Mes)</span>
+                  <i data-lucide="trending-up" class="icon-orange"></i>
+                </div>
+                <h3>0</h3>
+                <p>Transacciones registradas</p>
+              </div>
+
+
+              <div class="card stat-card">
+                <div class="card-header">
+                  <span>Alertas de stock</span>
+                  <i data-lucide="trending-up" class="icon-orange"></i>
+                </div>
+                <h3>0</h3>
+                <p>Registrada</p>
+              </div>
+
+            </div>
+
+          </section>
+          <div class="card top-products-container">
+
+            <div class="card-header">
+              <h3>Top 5 Productos con Mayor Salida</h3>
+              <div class="icon-circle icon-small"><i data-lucide="trending-up"></i></div>
+            </div>
+
+            <div class="product-list">
+              <!-- <div class="product-item">
+                <div class="rank">#1</div>
+                <div class="product-info">
+                  <p class="p-name">Cable UTP Cat 6 Exterior</p>
+                  <p class="p-cat">Telecomunicaciones</p>
+                </div>
+                <div class="product-qty">
+                  <span class="qty-num">50</span>
+                  <span class="qty-unit">MTS</span>
+                </div>
+              </div>
+
+              <div class="product-item">
+                <div class="rank">#2</div>
+                <div class="product-info">
+                  <p class="p-name">Filtro de Aire 20x20</p>
+                  <p class="p-cat">Sistemas de Climatización</p>
+                </div>
+                <div class="product-qty">
+                  <span class="qty-num">2</span>
+                  <span class="qty-unit">UND</span>
+                </div>
+              </div>
+              <div class="product-item">
+                <div class="rank">#3</div>
+                <div class="product-info">
+                  <p class="p-name">Módulo Rectificador 48V</p>
+                  <p class="p-cat">Energía DC</p>
+                </div>
+
+                <div class="product-qty">
+                  <span class="qty-num">1</span>
+                  <span class="qty-unit">UND</span>
+                </div>
+              </div>
+              <div class="product-item">
+                <div class="rank">#3</div>
+                <div class="product-info">
+                  <p class="p-name">Módulo Rectificador 48V</p>
+                  <p class="p-cat">Energía DC</p>
+                </div>
+                <div class="product-qty">
+                  <span class="qty-num">1</span>
+                  <span class="qty-unit">UND</span>
+                </div>
+              </div>
+              <div class="product-item">
+                <div class="rank">#1</div>
+                <div class="product-info">
+                  <p class="p-name">Cable UTP Cat 6 Exterior</p>
+                  <p class="p-cat">Telecomunicaciones</p>
+                </div>
+                <div class="product-qty">
+                  <span class="qty-num">50</span>
+                  <span class="qty-unit">MTS</span>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+        <!--tabla movimientos recientes-->
+        <!--TODO: agregar datos a la tabla-->
+        <div class="card table-card">
+          <h3>Movimientos Recientes</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>FECHA</th>
+                <th>TIPO</th>
+                <th>PRODUCTO</th>
+                <th>CANT.</th>
+                <th>ACTIVIDAD / DESTINO</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <!-- <tr>
+              <td>27/04/2026 20:44</td>
+              <td><span class="badge badge-salida">SALIDA</span></td>
+              <td>Filtro de Aire 20x20</td>
+              <td>2 und</td>
+              <td><strong>Mantenimiento Preventivo</strong><br><span>ET El Chaure</span></td>
+            </tr>
+            <tr>
+              <td>26/04/2026 22:44</td>
+              <td><span class="badge badge-salida">SALIDA</span></td>
+              <td>Módulo Rectificador 48V</td>
+              <td>1 und</td>
+              <td><strong>Atención de Falla</strong><br><span>ET Puerto La Cruz</span></td>
+            </tr>
+            <tr>
+              <td>25/04/2026 22:44</td>
+              <td><span class="badge badge-entrada">ENTRADA</span></td>
+              <td>Batería de Gel 12V 100Ah</td>
+              <td>12 und</td>
+              <td><strong>Reabastecimiento</strong><br><span>Almacén Principal</span></td>
+            </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!--vista inventario-->
+      <div id="inventory-view">
+        <header class="content-header">
+          <div class="header-titles">
+            <h1>Inventario</h1>
+            <p>Gestión de productos y niveles de stock.</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn-secondary"><i data-lucide="file-text"></i> Exportar PDF</button>
+            <button class="btn-primary"><i data-lucide="plus"></i> Registrar Inventario</button>
+          </div>
+        </header>
+
+        <section class="inventory-container card">
+          <table class="inventory-table">
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Producto</th>
+                <th>Categoría</th>
+                <th>Stock Actual</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr>
+                <td class="text-muted">CLI-001</td>
+                <td><strong>Compresor 5 Toneladas</strong></td>
+                <td><span class="badge2">Climatización</span></td>
+                <td>3 <span class="unit">und</span></td>
+                <td><span class="status-ok">● Óptimo</span></td>
+                <td>
+                  <div class="action-buttons">
+                    <button class="btn-action in"><i data-lucide="arrow-down-left"></i></button>
+                    <button class="btn-action out"><i data-lucide="arrow-up-right"></i></button>
+                  </div>
+                </td>
+              </tr>
+
+               <tr>
+                <td class="text-muted">CLI-001</td>
+                <td><strong>Compresor 5 Toneladas</strong></td>
+                <td><span class="badge2">Climatización</span></td>
+                <td>3 <span class="unit">und</span></td>
+                <td><span class="status-ok">● Óptimo</span></td>
+                <td>
+                  <div class="action-buttons">
+                    <button class="btn-action in"><i data-lucide="arrow-down-left"></i></button>
+                    <button class="btn-action out"><i data-lucide="arrow-up-right"></i></button>
+                  </div>
+                </td>
+              </tr> -->
+            </tbody>
+          </table>
+        </section>
+      </div>
+      <div id="movements-view">
+        <section class="content">
+          <div class="header-section" style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <h2>Movimientos</h2>
+              <p>Historial detallado de entradas y salidas de materiales.</p>
+            </div>
+            <div class="header-actions">
+              <button class="btn-secondary"
+                style="border: 1px solid #e2e8f0; padding: 8px 15px; border-radius: 6px; cursor: pointer; background: white;">
+                <i data-lucide="filter"></i> Filtrar Fecha
+              </button>
+            </div>
+          </div>
+
+          <div class="card table-card" style="margin-top: 20px;">
+            <table class="inventory-table">
+              <thead>
+                <tr>
+                  <th>FECHA / HORA</th>
+                  <th>TIPO</th>
+                  <th>PRODUCTO</th>
+                  <th>CANTIDAD</th>
+                  <th>RESPONSABLE / DESTINO</th>
+                </tr>
+              </thead>
+              <tbody id="movements-tbody">
+                <!-- <tr>
+                  <td class="text-muted">07/05/2026 14:30</td>
+                  <td><span class="badge"
+                      
+                  <td><strong>Cable UTP Cat 6 Exterior</strong></td>
+                  <td>+500 mts</td>
+                  <td>Almacén Central</td>
+                </tr>
+                <tr>
+                  <td class="text-muted">07/05/2026 10:15</td>
+                  <td><span class="badge"
+                      style="background: #fff7ed; color: #f97316; border: 1px solid #f97316;">SALIDA</span></td>
+                  <td><strong>Filtro de Aire 20x20</strong></td>
+                  <td>-2 und</td>
+                  <td>Sede El Chaure (Mantenimiento)</td>
+                </tr> -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="renderer.js"></script>
 </body>
 
 </html>
