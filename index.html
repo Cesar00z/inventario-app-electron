@@ -10,105 +10,105 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-  <div class="container">
-    <!--Sidebar,logo-->
-    <aside class="sidebar">
-      <div class="logo">
-        <div class="logo-icon"></div>
-        <div>
-          <h1>Inventario</h1>
-          <p>MV MIRANDA C.A</p>
-        </div>
+
+<div class="container">
+  <!--Sidebar,logo-->
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="./assets/img/logo.png" alt="Logo" class="logo-icon">
+      <div>
+        <h1>Inventario</h1>
+        <p>MV MIRANDA C.A</p>
       </div>
-      <!--navegacion-->
-      <nav class="menu">
-        <p class="menu-label">MENÚ PRINCIPAL</p>
-        <a href="#" class="menu-item active"><i data-lucide="layout-grid"></i> Dashboard</a>
-        <a href="#" class="menu-item"><i data-lucide="box"></i> Inventario</a>
-        <a href="#" class="menu-item"><i data-lucide="arrow-left-right"></i> Movimientos</a>
-      </nav>
+    </div>
+    <!--navegacion-->
+    <nav class="menu">
+      <p class="menu-label">MENÚ PRINCIPAL</p>
+      <a href="#" class="menu-item active"><i data-lucide="layout-grid"></i> Dashboard</a>
+      <a href="#" class="menu-item"><i data-lucide="box"></i> Inventario</a>
+      <a href="#" class="menu-item"><i data-lucide="arrow-left-right"></i> Movimientos</a>
+    </nav>
 
-      <div class="sidebar-footer">
-        <a href="#" class="menu-item"><i data-lucide="settings"></i> Ajustes</a>
-        <a href="#" class="menu-item"><i data-lucide="log-out"></i> Cerrar Sesión</a>
-        <p class="author">POR CÉSAR BRUZUAL</p>
+    <div class="sidebar-footer">
+      <a href="#" class="menu-item"><i data-lucide="settings"></i> Ajustes</a>
+      <a href="#" class="menu-item"><i data-lucide="log-out"></i> Cerrar Sesión</a>
+      <p class="author">POR CÉSAR BRUZUAL</p>
+    </div>
+  </aside>
+  <!--agrupar contenido principal-->
+  <main class="main-content">
+    <header class="top-bar">
+      <div class="search-container">
+        <i data-lucide="search"></i>
+        <input type="text" placeholder="Buscar productos, códigos...">
       </div>
-    </aside>
-    <!--agrupar contenido principal-->
-    <main class="main-content">
-      <header class="top-bar">
-        <div class="search-container">
-          <i data-lucide="search"></i>
-          <input type="text" placeholder="Buscar productos, códigos...">
-        </div>
-        <div class="notifications">
-          <i data-lucide="bell"></i>
-          <span class="dot"></span>
-        </div>
-      </header>
-      
+      <div class="notifications">
+        <i data-lucide="bell"></i>
+        <span class="dot"></span>
+      </div>
+    </header>
 
-      <!--TODO: implementar la funcionalidad-->
-      <!--header dashboard, section dasboard view-->
-      <div id="dashboard-view">
-        <div class="container-dashboard">
-          <section class="content">
-            <div class="header-section">
-              <h2>Dashboard</h2>
-              <p>Resumen general del inventario y movimientos.</p>
-            </div>
-            <!---->
-            <div class="stats-grid">
 
-              <div class="card stat-card">
-                <div class="card-header">
-                  <span id="total-articles-val">Total Artículos</span>
-                  <i data-lucide="package" class="icon-blue"></i>
-                </div>
-                <h3>0</h3>
-                <p>En inventario</p>
+    <!--TODO: implementar la funcionalidad-->
+    <!--header dashboard, section dasboard view-->
+    <div id="dashboard-view">
+      <div class="container-dashboard">
+        <section class="content">
+          <div class="header-section">
+            <h2>Dashboard</h2>
+            <p>Resumen general del inventario y movimientos.</p>
+          </div>
+          <!---->
+          <div class="stats-grid">
+
+            <div class="card stat-card">
+              <div class="card-header">
+                <span id="total-articles-val">Total Artículos</span>
+                <i data-lucide="package" class="icon-blue"></i>
               </div>
-
-              <div class="card stat-card">
-                <div class="card-header">
-                  <span>Entradas (Mes)</span>
-                  <i data-lucide="trending-down" class="icon-green"></i>
-                </div>
-                <h3>0</h3>
-                <p>Transacciones registradas</p>
-              </div>
-              <div class="card stat-card">
-                <div class="card-header">
-                  <span>Salidas (Mes)</span>
-                  <i data-lucide="trending-up" class="icon-orange"></i>
-                </div>
-                <h3>0</h3>
-                <p>Transacciones registradas</p>
-              </div>
-
-
-              <div class="card stat-card">
-                <div class="card-header">
-                  <span>Alertas de stock</span>
-                  <i data-lucide="trending-up" class="icon-orange"></i>
-                </div>
-                <h3>0</h3>
-                <p>Registrada</p>
-              </div>
-
+              <h3 id="total-articulos">0</h3>
+              <p>En inventario</p>
             </div>
 
-          </section>
-          <div class="card top-products-container">
-
-            <div class="card-header">
-              <h3>Top 5 Productos con Mayor Salida</h3>
-              <div class="icon-circle icon-small"><i data-lucide="trending-up"></i></div>
+            <div class="card stat-card">
+              <div class="card-header">
+                <span>Entradas (Mes)</span>
+                <i data-lucide="trending-down" class="icon-green"></i>
+              </div>
+              <h3 id="entradas-mes">0</h3>
+              <p>Transacciones registradas</p>
+            </div>
+            <div class="card stat-card">
+              <div class="card-header">
+                <span>Salidas (Mes)</span>
+                <i data-lucide="trending-up" class="icon-orange"></i>
+              </div>
+              <h3 id="salidas-mes">0</h3>
+              <p>Transacciones registradas</p>
             </div>
 
-            <div class="product-list">
-              <!-- <div class="product-item">
+
+            <div class="card stat-card">
+              <div class="card-header">
+                <span>Alertas de stock</span>
+                <i data-lucide="trending-up" class="icon-orange"></i>
+              </div>
+              <h3 id="alertas-stock">0</h3>
+              <p>Registrada</p>
+            </div>
+
+          </div>
+
+        </section>
+        <div class="card top-products-container">
+
+          <div class="card-header">
+            <h3>Top 5 Productos con Mayor Salida</h3>
+            <div class="icon-circle icon-small"><i data-lucide="trending-up"></i></div>
+          </div>
+
+          <div class="product-list">
+            <!-- <div class="product-item">
                 <div class="rank">#1</div>
                 <div class="product-info">
                   <p class="p-name">Cable UTP Cat 6 Exterior</p>
@@ -165,27 +165,27 @@
                   <span class="qty-unit">MTS</span>
                 </div>
               </div> -->
-            </div>
           </div>
         </div>
+      </div>
 
-        <!--tabla movimientos recientes-->
-        <!--TODO: agregar datos a la tabla-->
-        <div class="card table-card">
-          <h3>Movimientos Recientes</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>FECHA</th>
-                <th>TIPO</th>
-                <th>PRODUCTO</th>
-                <th>CANT.</th>
-                <th>ACTIVIDAD / DESTINO</th>
-              </tr>
-            </thead>
-            <tbody>
+      <!--tabla movimientos recientes-->
+      <!--TODO: agregar datos a la tabla-->
+      <div class="card table-card">
+        <h3>Movimientos Recientes</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>FECHA</th>
+              <th>TIPO</th>
+              <th>PRODUCTO</th>
+              <th>CANT.</th>
+              <th>ACTIVIDAD / DESTINO</th>
+            </tr>
+          </thead>
+          <tbody>
 
-              <!-- <tr>
+            <!-- <tr>
               <td>27/04/2026 20:44</td>
               <td><span class="badge badge-salida">SALIDA</span></td>
               <td>Filtro de Aire 20x20</td>
@@ -206,38 +206,38 @@
               <td>12 und</td>
               <td><strong>Reabastecimiento</strong><br><span>Almacén Principal</span></td>
             </tr> -->
-            </tbody>
-          </table>
-        </div>
+          </tbody>
+        </table>
       </div>
+    </div>
 
-      <!--vista inventario-->
-      <div id="inventory-view">
-        <header class="content-header">
-          <div class="header-titles">
-            <h1>Inventario</h1>
-            <p>Gestión de productos y niveles de stock.</p>
-          </div>
-          <div class="header-actions">
-            <button class="btn-secondary"><i data-lucide="file-text"></i> Exportar PDF</button>
-            <button class="btn-primary"><i data-lucide="plus"></i> Registrar Inventario</button>
-          </div>
-        </header>
+    <!--vista inventario-->
+    <div id="inventory-view">
+      <header class="content-header">
+        <div class="header-titles">
+          <h1>Inventario</h1>
+          <p>Gestión de productos y niveles de stock.</p>
+        </div>
+        <div class="header-actions">
+          <button class="btn-secondary"><i data-lucide="file-text"></i>Exportar PDF</button>
+          <button class="btn-primary"><i data-lucide="plus"></i>Registrar Inventario</button>
+        </div>
+      </header>
 
-        <section class="inventory-container card">
-          <table class="inventory-table">
-            <thead>
-              <tr>
-                <th>Código</th>
-                <th>Producto</th>
-                <th>Categoría</th>
-                <th>Stock Actual</th>
-                <th>Estado</th>
-                <th>Acciones</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- <tr>
+      <section class="inventory-container card">
+        <table class="inventory-table">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Producto</th>
+              <th>Categoría</th>
+              <th>Stock Actual</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr>
                 <td class="text-muted">CLI-001</td>
                 <td><strong>Compresor 5 Toneladas</strong></td>
                 <td><span class="badge2">Climatización</span></td>
@@ -264,38 +264,41 @@
                   </div>
                 </td>
               </tr> -->
-            </tbody>
-          </table>
-        </section>
-      </div>
-      <div id="movements-view">
-        <section class="content">
-          <div class="header-section" style="display: flex; justify-content: space-between; align-items: center;">
-            <div>
-              <h2>Movimientos</h2>
-              <p>Historial detallado de entradas y salidas de materiales.</p>
-            </div>
-            <div class="header-actions">
-              <button class="btn-secondary"
-                style="border: 1px solid #e2e8f0; padding: 8px 15px; border-radius: 6px; cursor: pointer; background: white;">
-                <i data-lucide="filter"></i> Filtrar Fecha
-              </button>
-            </div>
+          </tbody>
+        </table>
+      </section>
+    </div>
+    <!--vista movimientos-->
+    <div id="movements-view">
+      <section class="content-mov">
+        <div class="header-section-mov">
+          <div>
+            <h2>Movimientos</h2>
+            <p>Historial detallado de entradas y salidas de materiales.</p>
           </div>
+          <div class="header-actions">
+            <button class="btn-filter">
+              <i data-lucide="filter"></i> Filtrar Fecha
+            </button>
+            <button class="btn-primary" id="btn-registrar-salida">
+              Registrar Salida
+            </button>
+          </div>
+        </div>
 
-          <div class="card table-card" style="margin-top: 20px;">
-            <table class="inventory-table">
-              <thead>
-                <tr>
-                  <th>FECHA / HORA</th>
-                  <th>TIPO</th>
-                  <th>PRODUCTO</th>
-                  <th>CANTIDAD</th>
-                  <th>RESPONSABLE / DESTINO</th>
-                </tr>
-              </thead>
-              <tbody id="movements-tbody">
-                <!-- <tr>
+        <div class="card table-card" style="margin-top: 20px;">
+          <table class="inventory-table">
+            <thead>
+              <tr>
+                <th>FECHA / HORA</th>
+                <th>TIPO</th>
+                <th>PRODUCTO</th>
+                <th>CANTIDAD</th>
+                <th>RESPONSABLE / DESTINO</th>
+              </tr>
+            </thead>
+            <tbody id="movements-tbody">
+              <!-- <tr>
                   <td class="text-muted">07/05/2026 14:30</td>
                   <td><span class="badge"
                       
@@ -311,14 +314,142 @@
                   <td>-2 und</td>
                   <td>Sede El Chaure (Mantenimiento)</td>
                 </tr> -->
-              </tbody>
-            </table>
-          </div>
-        </section>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+<!--Modal Agregar Inventario -->
+<div id="modal-registro" class="modal-overlay">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Gestión de Inventario</h2>
+      <button id="btn-cerrar-modal" class="close-icon">&times;</button>
+    </div>
+
+    <!-- Tabs del Modal -->
+    <div class="modal-tabs">
+      <button class="tab-btn active">Nuevo Producto</button>
+      <button class="tab-btn">Registrar Entrada/Salida</button>
+    </div>
+
+    <div class="modal-body">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Código</label>
+          <input type="text" id="input-codigo" placeholder="Ej. CLI-005">
+        </div>
+        <div class="form-group">
+          <label>Unidad de Medida</label>
+          <select id="modal-unidad">
+            <!-- Cargado por JS -->
+          </select>
+        </div>
       </div>
-    </main>
+
+      <div class="form-group">
+        <label>Nombre del Producto</label>
+        <input type="text" id="input-nombre" placeholder="Ej. Filtro de Aceite">
+      </div>
+
+      <div class="form-group">
+        <label>Categoría</label>
+        <select id="modal-categoria">
+          <!-- Cargado por JS -->
+        </select>
+      </div>
+
+      <div class="form-row gray-bg">
+        <div class="form-group">
+          <label>Stock Inicial (Entrada)</label>
+          <input type="number" id="input-stock-inicial" value="0">
+          <span class="input-tip">Generará movimiento de entrada</span>
+        </div>
+        <div class="form-group">
+          <label>Stock Mínimo</label>
+          <input type="number" id="input-stock-minimo" value="0">
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn-cancel" id="btn-cancelar-modal">Cancelar</button>
+      <button type="button" class="btn-primary-modal">Añadir Producto</button>
+    </div>
   </div>
-  <script src="renderer.js"></script>
+</div>
+
+<!--Modal registrar salida de inventario -->
+<div id="modal-salida" class="modal-overlay">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Registrar Salida de Producto</h2>
+      <button class="close-icon" id="btn-cerrar-x-salida">&times;</button>
+    </div>
+
+    <div class="modal-body">
+      <div class="form-group">
+        <label>Buscar y Seleccionar Producto</label>
+        <input type="text" id="buscar-producto-salida" placeholder="Buscar por código o nombre...">
+        <select id="select-producto-salida">
+          <option value="">Seleccione un producto...</option>
+        </select>
+      </div>
+
+      <div class="stock-preview">
+        <div class="item-info">
+          <span id="preview-nombre">Seleccione un producto</span>
+          <small>Stock Actual: <span id="preview-stock-actual">0</span></small>
+        </div>
+        <div class="new-stock-display">
+          <small>Nuevo Stock Estimado</small>
+          <span id="preview-nuevo-stock">0</span> <small>und</small>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Cantidad</label>
+          <div class="quantity-control">
+            <button type="button" id="btn-minus">-</button>
+            <input type="number" id="cantidad-salida" value="1" min="1">
+            <button type="button" id="btn-plus">+</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Motivo / Actividad</label>
+          <select id="motivo-salida">
+            <option value="Mantenimiento Preventivo">Mantenimiento Preventivo</option>
+            <option value="Mantenimiento Correctivo">Mantenimiento Correctivo</option>
+            <option value="Urgencia/Falla">Urgencia / Falla</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Estación Destino</label>
+        <select id="estacion-destino">
+          <option value="ET El Chaure">ET El Chaure</option>
+          <option value="ET Puerto La Cruz">ET Puerto La Cruz</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Descripción / Observaciones</label>
+        <textarea id="obs-salida" placeholder="Detalles u observaciones relevantes..."></textarea>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn-cancel" id="btn-cancelar-salida">Cancelar</button>
+      <button class="btn-confirm" id="btn-confirmar-salida">Confirmar Salida</button>
+    </div>
+  </div>
+</div>
+
+<script src="renderer.js"></script>
 </body>
 
 </html>
