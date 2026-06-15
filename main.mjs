@@ -72,7 +72,7 @@ ipcMain.handle("obtener-movimientos", async () => {
   try {
     const { data, error } = await supabaseClient
       .from("movimientos")
-      .select("*")
+      .select("*, productos(nombre)")
       .order("id", { ascending: false }) // Los más recientes primero
       .limit(10); // Solo mostramos los últimos 10 en el dashboard
 

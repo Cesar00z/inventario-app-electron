@@ -321,7 +321,7 @@ async function actualizarInterfaz() {
       fila.innerHTML = `
                 <td>${new Date(mov.fecha).toLocaleDateString()}</td>
                 <td><span class="badge ${mov.tipo === "SALIDA" ? "bg-danger" : "bg-success"}">${mov.tipo}</span></td>
-                <td>${mov.producto_id}</td>
+                <td>${mov.productos?.nombre || mov.producto_id}</td>
                 <td>${mov.cantidad}</td>
                 <td>${mov.estacion || mov.actividad}</td>
             `;
