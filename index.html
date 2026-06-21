@@ -42,10 +42,6 @@
         <i data-lucide="search"></i>
         <input type="text" placeholder="Buscar productos, códigos...">
       </div>
-      <div class="notifications">
-        <i data-lucide="bell"></i>
-        <span class="dot"></span>
-      </div>
     </header>
 
 
@@ -103,11 +99,11 @@
         <div class="card top-products-container">
 
           <div class="card-header">
-            <h3>Top 5 Productos con Mayor Salida</h3>
+            <h3>Top 3 Productos con Mayor Salida</h3>
             <div class="icon-circle icon-small"><i data-lucide="trending-up"></i></div>
           </div>
 
-          <div class="product-list">
+          <div class="product-list" id="dashboard-top-products">
             <!-- <div class="product-item">
                 <div class="rank">#1</div>
                 <div class="product-info">
@@ -183,8 +179,7 @@
               <th>ACTIVIDAD / DESTINO</th>
             </tr>
           </thead>
-          <tbody>
-
+          <tbody id="dashboard-movements-tbody">
             <!-- <tr>
               <td>27/04/2026 20:44</td>
               <td><span class="badge badge-salida">SALIDA</span></td>
@@ -372,6 +367,11 @@
           <input type="number" id="input-stock-minimo" value="0">
         </div>
       </div>
+
+      <div class="form-group">
+        <label>Observación / Actividad (Opcional)</label>
+        <input type="text" id="input-observacion-producto" placeholder="Ej. Inventario inicial verificado por...">
+      </div>
     </div>
 
     <div class="modal-footer">
@@ -405,7 +405,7 @@
         </div>
         <div class="new-stock-display">
           <small>Nuevo Stock Estimado</small>
-          <span id="preview-nuevo-stock">0</span> <small>und</small>
+          <span id="preview-nuevo-stock">0</span> <small id="preview-unidad">und</small>
         </div>
       </div>
 
@@ -428,18 +428,23 @@
         </div>
       </div>
 
-      <div class="form-group">
-        <label>Estación Destino</label>
-        <select id="estacion-destino">
-          <option value="ET El Chaure">ET El Chaure</option>
-          <option value="ET Puerto La Cruz">ET Puerto La Cruz</option>
-        </select>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Fecha y Hora</label>
+          <input type="datetime-local" id="fecha-salida">
+        </div>
+        <div class="form-group">
+          <label>Descripción / Observaciones (Opcional)</label>
+          <input type="text" id="observacion-salida" placeholder="Detalles u observaciones...">
+        </div>
       </div>
 
       <div class="form-group">
-        <label>Descripción / Observaciones</label>
-        <textarea id="obs-salida" placeholder="Detalles u observaciones relevantes..."></textarea>
+        <label>Estación Destino</label>
+        <input type="text" id="estacion-destino" placeholder="Ej. ET El Chaure, Almacén Central...">
       </div>
+
+
     </div>
 
     <div class="modal-footer">

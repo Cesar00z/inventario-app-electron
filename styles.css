@@ -160,6 +160,7 @@ body {
     color: #475569;
     text-align: center;
     margin-top: 20px;
+    display: none
 }
 
 /*main content*/
@@ -570,11 +571,31 @@ td span {
 .btn-action.in {
     background: #ecfdf5;
     color: var(--success);
+    transition: background 0.2s;
+}
+
+.btn-action.in:hover {
+    background: #bbf7d0;
 }
 
 .btn-action.out {
     background: #fff7ed;
     color: #f97316;
+    transition: background 0.2s;
+}
+
+.btn-action.out:hover {
+    background: #fed7aa;
+}
+
+.btn-action.delete {
+    background: #fef2f2;
+    color: #ef4444;
+    transition: background 0.2s;
+}
+
+.btn-action.delete:hover {
+    background: #fecaca;
 }
 
 .font-bold {
@@ -792,4 +813,26 @@ td span {
     border-radius: 6px;
     font-weight: 600;
     cursor: pointer;
+}
+
+.badge2 {
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+.unit {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+}
+
+.obs-text {
+    color: red;
+    white-space: pre-line;
+    max-width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

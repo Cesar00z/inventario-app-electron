@@ -8,5 +8,7 @@ contextBridge.exposeInMainWorld('api', {
     obtenerDashboardStats: () => ipcRenderer.invoke('get-dashboard-stats'),
     registrarSalida: (datos) => ipcRenderer.invoke('registrar-salida', datos),
     obtenerMovimientos: () => ipcRenderer.invoke("obtener-movimientos"),
+    contarMovimientos: () => ipcRenderer.invoke("contar-movimientos"),
+    obtenerTopProductos: () => ipcRenderer.invoke("obtener-top-productos"),
+    eliminarProducto: (id) => ipcRenderer.invoke("eliminar-producto", id),
 });
-
